@@ -1,24 +1,34 @@
-body {
-     background-color: #f8f8f8;
-}
+
 :root{
      --rosa:#e082a8;
+     --azul:#8ed3cc;
+     --lato:"Lato", sans-serif;
+     --italic:'Italianno', cursive;
+     --negro:#000;
+     --blanco:#ffffff;
+     --gris:#9a9a9a;
+     --fondo:#f8f8f8;
+     --hover:#69aca5;
+     --gris-oscuro:#979797;
+     --enlace:#bde8dd;
+}
+body {
+     background-color: var(--fondo);
 }
 .encabezado {
      font-size: 2.4rem;
-     font-family: 'Lato', sans-serif;
-     color: #000000;
+     font-family: var(--lato);
+     color: var(--negro);
      line-height: 2.4rem;
 }
 .encabezado span {
      font-size: 3.8rem;
-     font-family: 'Italianno', cursive;
+     font-family: var(--italic);
      color: var(--rosa);
 }
 
 
 
-/** Sociales **/
 .sociales ul {
      list-style: none;
      margin:0;
@@ -54,16 +64,15 @@ body {
      content: '\f16a';
  }
 
- /** NAVEGACION **/
  .navegacion {
       background-color: var(--rosa);
  }
  .navbar-light .navbar-toggler{
-      background-color: #ffffff;
+      background-color: var(--blanco);
  }
  .navbar-light .navbar-brand,
  .navbar-light .navbar-brand:hover {
-      color: #ffffff;
+      color: var(--blanco);
  }
 
  .nav-principal {
@@ -75,39 +84,36 @@ body {
 
 
  .nav-link {
-      color: #ffffff;
+      color: var(--blanco);
       font-size: 1.4rem;
      transition: all .5s ease-in-out;
      font-family: 'Raleway', sans-serif;
  }
 
  .nav-link:hover {
-      background-color: #bde8dd;
-      color: #000000;
+      background-color: var(--enlace);
+      color: var(--negro);
  }
 
- /* CAROUSEL**/
 
  .carousel-caption h3 {
      font-family: 'Raleway', sans-serif;
      font-size: 2rem;
      font-weight: 900;
-     color: #ffffff;
+     color: var(--blanco);
 
  }
 
- /** Nuevo sitio **/
 
  .nuevo-sitio p {
-     font-family: 'Lato', sans-serif;
-     color: #979797;
+     font-family: var(--lato);
+     color: var(--gris-oscuro);
      font-size: 1.6rem;
  }
 
- /** Servicios **/
 
  .imagen-servicio img {
-      border: 6px solid #ffffff;
+      border: 6px solid var(--blanco);
       -webkit-transition: transform .3s ease;
       -ms-transition: transform .3s ease;
       transition: transform .3s ease;
@@ -118,7 +124,7 @@ body {
       transform: scale(1.2) rotate(10deg);
  }
  .servicio-info {
-      background-color: #ffffff;
+      background-color: var(--blanco);
       margin-top: -5rem;
  }
  .servicio-info .btn-primary {
@@ -127,15 +133,14 @@ body {
       border: none;
  }
 
- /* HORARIOS **/
 
  .horario {
-      background-color: #8ed3cc;
-      color: #ffffff;
+      background-color: var(--azul);
+      color: var(--blanco);
  }
  .horario h2 {
       font-size: 2.2rem;
-      font-family: 'Lato', sans-serif;
+      font-family: var(--lato);
  }
  .horario .table {
       border: 2px solid var(--rosa);
@@ -149,7 +154,7 @@ body {
  }
  .horario .table tbody tr td {
       padding: .35rem;
-      font-family: 'Lato', sans-serif;
+      font-family: var(--lato);
       font-size: 1.2rem;
  }
  .bg-horario {
@@ -160,13 +165,12 @@ body {
       min-height: 400px;
  }
 
- /* PRODUCTOS **/
  .productos .card {
       border: none;
  }
 
  .productos .card a {
-      color: #000000;
+      color: var(--negro);
  }
  .productos .card a:hover {
       text-decoration: none;
@@ -175,7 +179,7 @@ body {
  .productos .card h3 {
       color: var(--rosa);
       font-size: 1.2rem;
-      font-family: 'Lato', sans-serif;
+      font-family: var(--lato);
  }
 
  .productos .card p {
@@ -183,16 +187,15 @@ body {
  }
  .productos .card .precio {
       font-size: 1.6rem;
-      color: #979797;
+      color: var(--gris-oscuro);
  }
 
- /** Citas **/
  .citas {
       background-image: url(../img/bg_citas.jpg);
       background-repeat: no-repeat;
       background-position: center center;
       background-attachment: fixed;
-      color: #ffffff;
+      color: var(--blanco);
  }
 
  @media (min-width: 992px) {
@@ -202,30 +205,28 @@ body {
  }
  .citas h3 {
       font-size: 3.5rem;
-      font-family: 'Lato', sans-serif;
+      font-family: var(--lato);
  }
  .citas p {
       font-size: 1.2rem;
       line-height: 2.6rem;
  }
 .btn-primary {
-      background-color: #8ed3cc;
+      background-color: var(--azul);
       border: 0;
       padding: 1rem 5rem;
       border-radius: 0;
-      font-family: 'Lato', sans-serif;
+      font-family: var(--lato);
       font-size: 1.2rem;
  }
  .btn-primary:hover {
-    background-color: #69aca5;
+    background-color: var(--hover);
  }
- /* footer */
  .copyright {
-      color:#979797;
+      color:var(--gris-oscuro);
       font-size: .8rem;
  }
 
- /** Hero **/
  .hero {
       position: relative;
  }
@@ -233,34 +234,32 @@ body {
       position: absolute;
       bottom: 2rem;
       right: 0;
-      background-color: #8ed3cc;
+      background-color: var(--azul);
       font-family: 'Raleway', sans-serif;
      font-weight: 900;
-     color: #ffffff;
+     color: var(--blanco);
      font-size: 2.8rem;
 }
 
 .contenido-principal p {
      font-size: 1.2rem;
      line-height: 2.2rem;
-     font-family: 'Lato', sans-serif;
+     font-family: var(--lato);
 }
-/** SIDEBAR **/
 
 aside {
-     background-color: #8ed3cc;
-     color: #ffffff;
+     background-color: var(--azul);
+     color: var(--blanco);
 }
 
-/** Accordion / Servicios **/
 
 #servicios .card-header {
      background-color: var(--rosa);
      padding: 0 1.25rem;
 }
 #servicios .card-header .btn-link {
-     color: #ffffff;
-     font-family: 'Lato', sans-serif;
+     color: var(--blanco);
+     font-family: var(--lato);
      font-size: 1.6rem;
 }
 #servicios .card-body {
@@ -269,8 +268,8 @@ aside {
 
 /* cupon*/
 .cupon {
-     border: 3px dashed #ffffff;
-     font-family: 'Lato', sans-serif;
+     border: 3px dashed var(--blanco);
+     font-family: var(--lato);
 }
 .cupon .display-4 {
      font-size: 2rem;
@@ -279,7 +278,6 @@ aside {
      font-size: 1.2rem;
 }
 
-/* PRODUCTOS **/
 
 @media (min-width: 576px) {
      .card-columns {
@@ -299,8 +297,7 @@ aside {
       }
 }
 
-/** Contacto **/
 .formulario-contacto {
-    border: 2px solid #9a9a9a;
-    background-color: #ffffff;
+    border: 2px solid var(--gris);
+    background-color: var(--blanco);
 }
