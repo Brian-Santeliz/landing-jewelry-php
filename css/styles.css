@@ -1,303 +1,291 @@
-
-:root{
-     --rosa:#e082a8;
-     --azul:#8ed3cc;
-     --lato:"Lato", sans-serif;
-     --italic:'Italianno', cursive;
-     --negro:#000;
-     --blanco:#ffffff;
-     --gris:#9a9a9a;
-     --fondo:#f8f8f8;
-     --hover:#69aca5;
-     --gris-oscuro:#979797;
-     --enlace:#bde8dd;
+:root {
+  --rosa: #e082a8;
+  --azul: #8ed3cc;
+  --lato: "Lato", sans-serif;
+  --italic: "Italianno", cursive;
+  --negro: #000;
+  --blanco: #ffffff;
+  --gris: #9a9a9a;
+  --fondo: #f8f8f8;
+  --hover: #69aca5;
+  --gris-oscuro: #979797;
+  --enlace: #bde8dd;
 }
 body {
-     background-color: var(--fondo);
+  background-color: var(--fondo);
 }
 .encabezado {
-     font-size: 2.4rem;
-     font-family: var(--lato);
-     color: var(--negro);
-     line-height: 2.4rem;
+  font-size: 2.4rem;
+  font-family: var(--lato);
+  color: var(--negro);
+  line-height: 2.4rem;
 }
 .encabezado span {
-     font-size: 3.8rem;
-     font-family: var(--italic);
-     color: var(--rosa);
+  font-size: 3.8rem;
+  font-family: var(--italic);
+  color: var(--rosa);
 }
 
-
-
 .sociales ul {
-     list-style: none;
-     margin:0;
-     padding:0;
- }
- .sociales ul li {
-     position: relative;
-     display: inline-block;
- }
- .sociales ul li a::before {
-     font-family: 'FontAwesome';
-     display: inline-block;
-     vertical-align: top;
-     padding: 0.4rem;
-     content: '\f08e';
-     -webkit-font-smoothing: antialiased;
-     font-size: 2rem;
-     color: var(--rosa);
- }
- .sociales ul li a[href*="facebook.com"]::before{
-     content: '\f230';
- }
- .sociales ul li a[href*="twitter.com"]::before{
-     content: '\f081';
- }
- .sociales ul li a[href*="instagram.com"]::before{
-     content: '\f16d';
- }
- .sociales ul li a[href*="pinterest.com"]::before{
-     content: '\f0d2';
- }
- .sociales ul li a[href*="youtube.com"]::before{
-     content: '\f16a';
- }
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sociales ul li {
+  position: relative;
+  display: inline-block;
+}
+.sociales ul li a::before {
+  font-family: "FontAwesome";
+  display: inline-block;
+  vertical-align: top;
+  padding: 0.4rem;
+  content: "\f08e";
+  -webkit-font-smoothing: antialiased;
+  font-size: 2rem;
+  color: var(--rosa);
+}
+.sociales ul li a[href*="facebook.com"]::before {
+  content: "\f230";
+}
+.sociales ul li a[href*="twitter.com"]::before {
+  content: "\f081";
+}
+.sociales ul li a[href*="instagram.com"]::before {
+  content: "\f16d";
+}
+.sociales ul li a[href*="pinterest.com"]::before {
+  content: "\f0d2";
+}
+.sociales ul li a[href*="youtube.com"]::before {
+  content: "\f16a";
+}
 
- .navegacion {
-      background-color: var(--rosa);
- }
- .navbar-light .navbar-toggler{
-      background-color: var(--blanco);
- }
- .navbar-light .navbar-brand,
- .navbar-light .navbar-brand:hover {
-      color: var(--blanco);
- }
+.navegacion {
+  background-color: var(--rosa);
+}
+.navbar-light .navbar-toggler {
+  background-color: var(--blanco);
+}
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover {
+  color: var(--blanco);
+}
 
- .nav-principal {
-      background-image: url(../img/border_horizontal.png),
-                         url(../img/border_horizontal.png);
-     background-repeat: repeat-x;
-     background-position: 0px top, 0px bottom;
- }
+.nav-principal {
+  background-image: url(../img/border_horizontal.png),
+    url(../img/border_horizontal.png);
+  background-repeat: repeat-x;
+  background-position: 0px top, 0px bottom;
+}
 
+.nav-link {
+  color: var(--blanco);
+  font-size: 1.4rem;
+  transition: all 0.5s ease-in-out;
+  font-family: "Raleway", sans-serif;
+}
 
- .nav-link {
-      color: var(--blanco);
-      font-size: 1.4rem;
-     transition: all .5s ease-in-out;
-     font-family: 'Raleway', sans-serif;
- }
+.nav-link:hover {
+  background-color: var(--enlace);
+  color: var(--negro);
+}
 
- .nav-link:hover {
-      background-color: var(--enlace);
-      color: var(--negro);
- }
+.carousel-caption h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--blanco);
+}
 
+.nuevo-sitio p {
+  font-family: var(--lato);
+  color: var(--gris-oscuro);
+  font-size: 1.6rem;
+}
+.imagen-servicio img {
+  border: 6px solid var(--blanco);
+  -webkit-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.imagen-servicio img:hover {
+  -webkit-transform: scale(1.2) rotate(10deg);
+  -ms-transform: scale(1.2) rotate(10deg);
+  transform: scale(1.2) rotate(10deg);
+}
+.servicio-info {
+  background-color: var(--blanco);
+  margin-top: -5rem;
+}
+.servicio-info .btn-primary {
+  border-radius: 0;
+  background-color: var(--rosa);
+  border: none;
+}
 
- .carousel-caption h3 {
-     font-family: 'Raleway', sans-serif;
-     font-size: 2rem;
-     font-weight: 900;
-     color: var(--blanco);
+.horario {
+  background-color: var(--azul);
+  color: var(--blanco);
+}
+.horario h2 {
+  font-size: 2.2rem;
+  font-family: var(--lato);
+}
+.horario .table {
+  border: 2px solid var(--rosa);
+}
+.horario .table thead {
+  background-color: var(--rosa);
+}
+.horario .table td,
+.horario .table thead th {
+  border: none;
+}
+.horario .table tbody tr td {
+  padding: 0.35rem;
+  font-family: var(--lato);
+  font-size: 1.2rem;
+}
+.bg-horario {
+  background-image: url(../img/bg_horarios.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 400px;
+}
 
- }
+.productos .card {
+  border: none;
+}
 
+.productos .card a {
+  color: var(--negro);
+}
+.productos .card a:hover {
+  text-decoration: none;
+}
 
- .nuevo-sitio p {
-     font-family: var(--lato);
-     color: var(--gris-oscuro);
-     font-size: 1.6rem;
- }
+.productos .card h3 {
+  color: var(--rosa);
+  font-size: 1.2rem;
+  font-family: var(--lato);
+}
 
+.productos .card p {
+  font-size: 0.8rem;
+}
+.productos .card .precio {
+  font-size: 1.6rem;
+  color: var(--gris-oscuro);
+}
 
- .imagen-servicio img {
-      border: 6px solid var(--blanco);
-      -webkit-transition: transform .3s ease;
-      -ms-transition: transform .3s ease;
-      transition: transform .3s ease;
- }
- .imagen-servicio img:hover {
-      -webkit-transform: scale(1.2) rotate(10deg);
-      -ms-transform: scale(1.2) rotate(10deg);
-      transform: scale(1.2) rotate(10deg);
- }
- .servicio-info {
-      background-color: var(--blanco);
-      margin-top: -5rem;
- }
- .servicio-info .btn-primary {
-      border-radius: 0;
-      background-color: var(--rosa);
-      border: none;
- }
+.citas {
+  background-image: url(../img/bg_citas.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  color: var(--blanco);
+}
 
-
- .horario {
-      background-color: var(--azul);
-      color: var(--blanco);
- }
- .horario h2 {
-      font-size: 2.2rem;
-      font-family: var(--lato);
- }
- .horario .table {
-      border: 2px solid var(--rosa);
- }
- .horario .table thead {
-      background-color: var(--rosa);
- }
- .horario .table td,
- .horario .table thead th {
-      border: none;
- }
- .horario .table tbody tr td {
-      padding: .35rem;
-      font-family: var(--lato);
-      font-size: 1.2rem;
- }
- .bg-horario {
-      background-image: url(../img/bg_horarios.jpg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      min-height: 400px;
- }
-
- .productos .card {
-      border: none;
- }
-
- .productos .card a {
-      color: var(--negro);
- }
- .productos .card a:hover {
-      text-decoration: none;
- }
-
- .productos .card h3 {
-      color: var(--rosa);
-      font-size: 1.2rem;
-      font-family: var(--lato);
- }
-
- .productos .card p {
-      font-size: .8rem;
- }
- .productos .card .precio {
-      font-size: 1.6rem;
-      color: var(--gris-oscuro);
- }
-
- .citas {
-      background-image: url(../img/bg_citas.jpg);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      color: var(--blanco);
- }
-
- @media (min-width: 992px) {
-      .citas {
-          background-size: cover;
-      }
- }
- .citas h3 {
-      font-size: 3.5rem;
-      font-family: var(--lato);
- }
- .citas p {
-      font-size: 1.2rem;
-      line-height: 2.6rem;
- }
+@media (min-width: 992px) {
+  .citas {
+    background-size: cover;
+  }
+}
+.citas h3 {
+  font-size: 3.5rem;
+  font-family: var(--lato);
+}
+.citas p {
+  font-size: 1.2rem;
+  line-height: 2.6rem;
+}
 .btn-primary {
-      background-color: var(--azul);
-      border: 0;
-      padding: 1rem 5rem;
-      border-radius: 0;
-      font-family: var(--lato);
-      font-size: 1.2rem;
- }
- .btn-primary:hover {
-    background-color: var(--hover);
- }
- .copyright {
-      color:var(--gris-oscuro);
-      font-size: .8rem;
- }
+  background-color: var(--azul);
+  border: 0;
+  padding: 1rem 5rem;
+  border-radius: 0;
+  font-family: var(--lato);
+  font-size: 1.2rem;
+}
+.btn-primary:hover {
+  background-color: var(--hover);
+}
+.copyright {
+  color: var(--gris-oscuro);
+  font-size: 0.8rem;
+}
 
- .hero {
-      position: relative;
- }
- .hero h2 {
-      position: absolute;
-      bottom: 2rem;
-      right: 0;
-      background-color: var(--azul);
-      font-family: 'Raleway', sans-serif;
-     font-weight: 900;
-     color: var(--blanco);
-     font-size: 2.8rem;
+.hero {
+  position: relative;
+}
+.hero h2 {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  background-color: var(--azul);
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: var(--blanco);
+  font-size: 2.8rem;
 }
 
 .contenido-principal p {
-     font-size: 1.2rem;
-     line-height: 2.2rem;
-     font-family: var(--lato);
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-family: var(--lato);
 }
 
 aside {
-     background-color: var(--azul);
-     color: var(--blanco);
+  background-color: var(--azul);
+  color: var(--blanco);
 }
-
 
 #servicios .card-header {
-     background-color: var(--rosa);
-     padding: 0 1.25rem;
+  background-color: var(--rosa);
+  padding: 0 1.25rem;
 }
 #servicios .card-header .btn-link {
-     color: var(--blanco);
-     font-family: var(--lato);
-     font-size: 1.6rem;
+  color: var(--blanco);
+  font-family: var(--lato);
+  font-size: 1.6rem;
 }
 #servicios .card-body {
-     font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 /* cupon*/
 .cupon {
-     border: 3px dashed var(--blanco);
-     font-family: var(--lato);
+  border: 3px dashed var(--blanco);
+  font-family: var(--lato);
 }
 .cupon .display-4 {
-     font-size: 2rem;
+  font-size: 2rem;
 }
 .cupon p {
-     font-size: 1.2rem;
+  font-size: 1.2rem;
 }
-
 
 @media (min-width: 576px) {
-     .card-columns {
-          -webkit-column-count: 2;
-          -moz-column-count: 2;
-          column-count: 2;
-          -webkit-column-gap: 1.25rem;
-          -moz-column-gap: 1.25rem;
-          column-gap: 1.25rem;
-      }
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+  }
 }
 @media (min-width: 992px) {
-     .card-columns {
-          -webkit-column-count: 4;
-          -moz-column-count: 4;
-          column-count: 4;
-      }
+  .card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
 }
 
 .formulario-contacto {
-    border: 2px solid var(--gris);
-    background-color: var(--blanco);
+  border: 2px solid var(--gris);
+  background-color: var(--blanco);
 }
