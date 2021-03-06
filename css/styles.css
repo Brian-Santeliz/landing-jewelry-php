@@ -1,7 +1,9 @@
 body {
      background-color: #f8f8f8;
 }
-
+:root{
+     --rosa:#e082a8;
+}
 .encabezado {
      font-size: 2.4rem;
      font-family: 'Lato', sans-serif;
@@ -11,7 +13,7 @@ body {
 .encabezado span {
      font-size: 3.8rem;
      font-family: 'Italianno', cursive;
-     color: #e082a8;
+     color: var(--rosa);
 }
 
 
@@ -34,7 +36,7 @@ body {
      content: '\f08e';
      -webkit-font-smoothing: antialiased;
      font-size: 2rem;
-     color: #e082a8;
+     color: var(--rosa);
  }
  .sociales ul li a[href*="facebook.com"]::before{
      content: '\f230';
@@ -54,7 +56,7 @@ body {
 
  /** NAVEGACION **/
  .navegacion {
-      background-color: #8ed3cc;
+      background-color: var(--rosa);
  }
  .navbar-light .navbar-toggler{
       background-color: #ffffff;
@@ -121,7 +123,7 @@ body {
  }
  .servicio-info .btn-primary {
       border-radius: 0;
-      background-color: #e082a8;
+      background-color: var(--rosa);
       border: none;
  }
 
@@ -136,10 +138,10 @@ body {
       font-family: 'Lato', sans-serif;
  }
  .horario .table {
-      border: 2px solid #e082a8;
+      border: 2px solid var(--rosa);
  }
  .horario .table thead {
-      background-color: #e082a8;
+      background-color: var(--rosa);
  }
  .horario .table td,
  .horario .table thead th {
@@ -171,7 +173,7 @@ body {
  }
 
  .productos .card h3 {
-      color: #e082a8;
+      color: var(--rosa);
       font-size: 1.2rem;
       font-family: 'Lato', sans-serif;
  }
@@ -253,7 +255,7 @@ aside {
 /** Accordion / Servicios **/
 
 #servicios .card-header {
-     background-color: #e082a8;
+     background-color: var(--rosa);
      padding: 0 1.25rem;
 }
 #servicios .card-header .btn-link {
