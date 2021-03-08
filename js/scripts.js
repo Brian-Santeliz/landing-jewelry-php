@@ -10,9 +10,12 @@
         form.addEventListener(
           "submit",
           function (event) {
+            event.preventDefault();
             if (form.checkValidity() === false) {
-              event.preventDefault();
               event.stopPropagation();
+              console.log("faltan datos");
+            } else {
+              console.log("todo bien");
             }
             form.classList.add("was-validated");
           },
