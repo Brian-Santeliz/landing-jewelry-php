@@ -1,6 +1,7 @@
   <?php 
   include "templates/header.php";
   include "templates/navbar.php";
+  include "controller/funcion.php";
   ?>
     <div class="container pt-4">
       <div class="row no-gutters">
@@ -22,159 +23,30 @@
 
           <div class="row">
             <div class="card-columns">
+            <?php
+        $productos_db = obtener_productos(8);
+        while($producto = $productos_db->fetch_assoc() ){
+        ?>
               <div class="card">
-                <a href="producto.html">
+                <a href="producto.php?productoId=<?php echo $producto["id"]?>">
                   <img
-                    src="img/producto_mini_1.jpg"
+                    src="img/<?php echo $producto[imagen_mini] ?>"
                     class="card-img-top img-fluid"
                   />
                   <div class="card-body">
                     <h3 class="card-title text-center text-uppercase">
-                      Collar de Plata chapado en oro
+                      <?php echo $producto["nombre"]?>
                     </h3>
                     <p class="card-text text-uppercase">
-                      Collar de Corazón y Flecha es la manera perfecta de
-                      sorprender a tu pareja! Tú y tu pareja atesorarán este
-                      collar para siempre
+                    <?php echo $producto["descripcion_corta"]?>
                     </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
+                    <p class="precio lead text-center mb-0">$ 
+                    <?php echo $producto["precio"]?>
+                    </p>
                   </div>
                 </a>
               </div>
-
-              <div class="card">
-                <a href="#">
-                  <img
-                    src="img/producto_mini_2.jpg"
-                    class="card-img-top img-fluid"
-                  />
-                  <div class="card-body">
-                    <h3 class="card-title text-center text-uppercase">
-                      ANILLO de DIAMANTE
-                    </h3>
-                    <p class="card-text text-uppercase">
-                      Anillo "Piamonte" Oro Blanco 18k y Diamante 0.20 cts: Con
-                      cuerpo de sección rectangular
-                    </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="card">
-                <a href="#">
-                  <img
-                    src="img/producto_mini_3.jpg"
-                    class="card-img-top img-fluid"
-                  />
-                  <div class="card-body">
-                    <h3 class="card-title text-center text-uppercase">
-                      Anillo zafiro ovalado
-                    </h3>
-                    <p class="card-text text-uppercase">
-                      Abundancia, paciencia y equilibrio son parte de sus
-                      significados.
-                    </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="card">
-                <a href="#">
-                  <img
-                    src="img/producto_mini_4.jpg"
-                    class="card-img-top img-fluid"
-                  />
-                  <div class="card-body">
-                    <h3 class="card-title text-center text-uppercase">
-                      PULSERA DE GEMAS
-                    </h3>
-                    <p class="card-text text-uppercase">
-                      Esta pulsera ha sido fabricada a partir de siete colores
-                      de gemas chakra que se corresponden con los siete chakras
-                      principales del cuerpo
-                    </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="card">
-                <a href="#">
-                  <img
-                    src="img/producto_mini_5.jpg"
-                    class="card-img-top img-fluid"
-                  />
-                  <div class="card-body">
-                    <h3 class="card-title text-center text-uppercase">
-                      ANILLO DE BODAS
-                    </h3>
-                    <p class="card-text text-uppercase">
-                      Hermoso anillo de bodas en oro de 18 kilates bañado en
-                      diamantes
-                    </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="card">
-                <a href="#">
-                  <img
-                    src="img/producto_mini_6.jpg"
-                    class="card-img-top img-fluid"
-                  />
-                  <div class="card-body">
-                    <h3 class="card-title text-center text-uppercase">
-                      Gargantilla de Boda Especial
-                    </h3>
-                    <p class="card-text text-uppercase">
-                      Si te gusta la elegancia clásica y los complementos
-                      sencillos, la gargantilla te encantará.
-                    </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="card">
-                <a href="#">
-                  <img
-                    src="img/producto_mini_7.jpg"
-                    class="card-img-top img-fluid"
-                  />
-                  <div class="card-body">
-                    <h3 class="card-title text-center text-uppercase">
-                      ANILLO DE 3 oro y diamantes
-                    </h3>
-                    <p class="card-text text-uppercase">
-                      Anillo de oro 14 quilates (14K) contiene 14 partes de oro
-                      fundido con 10 partes de otro metal.
-                    </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="card">
-                <a href="#">
-                  <img
-                    src="img/producto_mini_8.jpg"
-                    class="card-img-top img-fluid"
-                  />
-                  <div class="card-body">
-                    <h3 class="card-title text-center text-uppercase">
-                      Gargantilla plata esterlina 925
-                    </h3>
-                    <p class="card-text text-uppercase">
-                      Elegante collar de gargantilla de cristal de plata
-                      esterlina 925 Largo de la cadena 45 cm aprox
-                    </p>
-                    <p class="precio lead text-center mb-0">$ 25</p>
-                  </div>
-                </a>
-              </div>
+              <?php } ?>
             </div>
           </div>
         </main>
