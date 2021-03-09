@@ -11,11 +11,11 @@
           </div>
           <div class="col-md-4 text-center">
             <h3 class="text-uppercase pb-4">Paginas</h3>
-            <a class="nav-link btn-link text-dark" href="index.html">Inicio</a>
-            <a class="nav-link btn-link text-dark" href="servicios.html"
+            <a class="nav-link btn-link text-dark" href="index.php">Inicio</a>
+            <a class="nav-link btn-link text-dark" href="servicios.php"
               >Servicios</a
             >
-            <a class="nav-link btn-link text-dark" href="contacto.html"
+            <a class="nav-link btn-link text-dark" href="contacto.php"
               >Contácto</a
             >
           </div>

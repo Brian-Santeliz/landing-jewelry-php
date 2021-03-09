@@ -2,7 +2,6 @@
     include "templates/header.php";
     include "templates/navbar.php";
   ?>
-
     <div class="container pt-4">
       <div class="row no-gutters">
         <div class="col-12 hero">
@@ -155,21 +154,10 @@
       </div>
     </div>
 
-    <div class="citas container-fluid py-5 mt-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6 text-center">
-          <h3 class="text-uppercase">Realiza una cita</h3>
-          <p class="mt-5">
-            Maecenas rhoncus, augue sed volutpat suscipit, augue felis laoreet
-            lectus, vel convallis diam est eu lectus. Mauris metus orci, tempus
-            nec bibendum eget, pulvinar at metus. Etiam egestas sodales auctor.
-          </p>
-          <a href="contacto.html" class="btn btn-primary mt-3 text-uppercase"
-            >Leer más</a
-          >
-        </div>
-      </div>
-    </div>
+    
+    <?php 
+    include "templates/cita.php";
+    ?>
     <?php 
     include "templates/footer.php";
     ?>
