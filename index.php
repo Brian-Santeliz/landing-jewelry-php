@@ -1,6 +1,8 @@
-
-
-    <div class="container">
+  <?php 
+  include "templates/header.php";
+  include "templates/navbar.php";
+  ?>
+<div class="container">
       <div
         id="slider-principal"
         class="carousel slide mt-4"
@@ -276,5 +278,6 @@
         </div>
       </div>
     </div>
-
-    
+  <?php 
+  include "templates/footer.php";
+  ?>
