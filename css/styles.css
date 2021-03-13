@@ -288,3 +288,7 @@ aside {
   border: 2px solid var(--gris);
   background-color: var(--blanco);
 }
+.active{
+  background:var(--azul);
+  border-radius: 1em;
+}

@@ -140,7 +140,7 @@
           <div class="sidebar p-3">
             <h2 class="text-center text-uppercase mt-4">Nuevos Clientes</h2>
             <p class="lead text-center mt-4">
-              Recibe 20% de descuento con este cupón
+              Obtenga 15% de descuento con este cupón
             </p>
 
             <div class="cupon px-2 py-5 mt-5">
