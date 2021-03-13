@@ -1,12 +1,27 @@
 <?php 
+    if(isset($_GET["productoId"])){
+      if(filter_var($_GET["productoId"], FILTER_VALIDATE_INT)){
+        $producto_id = $_GET["productoId"];
+      }else{
+        header("location: index.php");
+        exit;
+      }
+    }
     include "templates/header.php";
     include "templates/navbar.php";
+    include "controller/funcion.php";
+    $resultado = obtener_producto_id($producto_id);
+    if($resultado->num_rows >0){
+    while ($producto = $resultado->fetch_assoc()){
+
   ?>
     <div class="container pt-4">
       <div class="row no-gutters">
         <div class="col-12 hero">
-          <img src="img/producto_1.jpg" class="img-fluid" />
-          <h2 class="text-uppercase d-none d-md-block py-3 px-5">Producto 1</h2>
+          <img src="img/<?php echo $producto[imagen_grande] ?>" class="img-fluid" />
+          <h2 class="text-uppercase d-none d-md-block py-3 px-5">
+            <?php echo $producto["nombre"] ?>
+          </h2>
         </div>
       </div>
     </div>
@@ -15,46 +30,31 @@
       <div class="row no-gutters">
         <main class="col-lg-8 contenido-principal">
           <h2 class="d-block d-md-none text-uppercase text-center">
-            Producto 1
+            <?php echo $producto["nombre"] ?>
           </h2>
-
-          <p>
-            Nulla in orci at est porta egestas id accumsan nisl. Sed cursus ante
-            elit, non dapibus lectus ullamcorper ac. Donec finibus est vitae
-            semper ultrices. Maecenas ante leo, ornare eget feugiat et,
-            dignissim eget erat. Quisque semper felis in ante ornare, in
-            tristique diam scelerisque. Nullam imperdiet luctus porttitor.
-            Curabitur dictum lorem lorem, at facilisis sapien fermentum vel. In
-            commodo arcu felis, id luctus ex bibendum at. Etiam tempus vehicula
-            est eget pellentesque. Morbi quis lorem varius, tincidunt arcu ut,
-            lacinia dolor. Suspendisse ac lacinia metus, et pellentesque justo.
-            Ut nec arcu eu nulla finibus dapibus.
-          </p>
-
-          <p>
-            Quisque arcu odio, consequat a leo eu, lobortis feugiat purus.
-            Phasellus lectus nulla, convallis sit amet sollicitudin ac, placerat
-            vulputate augue. Morbi lorem lectus, tincidunt et quam quis, rhoncus
-            vulputate purus. Etiam ultrices ut justo ut blandit. Suspendisse at
-            nisi eget quam porta tempor sed eu nibh. Suspendisse vehicula
-            bibendum blandit. Curabitur laoreet malesuada commodo.
-          </p>
+         <?php echo $producto["descripcion"]?>
         </main>
 
         <aside class="col-lg-4 pt-4 pt-lg-0">
           <div class="sidebar pt-5 descripcion_producto">
             <h2 class="text-center text-uppercase mt-4">Descripción</h2>
             <p class="text-center">
-              Suspendisse vehicula bibendum blandit. Curabitur laoreet malesuada
-              commodo.
+            <?php echo $producto["descripcion_corta"]?>
             </p>
 
             <h3 class="text-uppercase text-center mt-5">Precio</h3>
-            <p class="display-4 text-center">$25.00</p>
+            <p class="display-4 text-center">$
+         <?php echo $producto["precio"]?>
+            </p>
           </div>
         </aside>
       </div>
     </div>
-    <?php 
+    <?php
+      }
+    }else{
+    echo '<h2 class="text-center text-uppercase mt-4">Producto No Encontrado</h2>';
+    }
+
     include "templates/footer.php";
     ?>
