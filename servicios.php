@@ -145,8 +145,8 @@
 
             <div class="cupon px-2 py-5 mt-5">
               <p class="text-uppercase text-center mb-0">
-                <span class="display-4">20% Descuento</span> <br />
-                en todos los servicios
+                <span class="display-4">15% Descuento</span> <br />
+                en todos los productos & Servicios
               </p>
             </div>
           </div>
