@@ -28,6 +28,9 @@
               <li class="nav-item">
                 <a href="contacto.php" class="nav-link">Contacto</a>
               </li>
+              <li class="nav-item">
+                <a href="contacto.php" class="nav-link">Iniciar</a>
+              </li>
             </ul>
           </div>
         </div>
