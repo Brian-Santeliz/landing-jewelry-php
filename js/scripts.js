@@ -4,6 +4,9 @@
     function () {
       const forms = document.getElementsByClassName("needs-validation");
       const formulario = document.getElementById("formulario-contacto");
+      const nombre = document.getElementById("nombre");
+      const email = document.getElementById("email");
+      const mensaje = document.getElementById("mensaje");
       const footer = document.getElementById("footer");
       const fecha = new Date().getFullYear();
       footer.innerHTML = `${fecha}`;
@@ -15,8 +18,21 @@
             if (form.checkValidity() === false) {
               event.stopPropagation();
             } else {
-              //cambiar por jquery
-              const ajax = new XMLHttpRequest();
+              const data = {
+                nombre: nombre.value,
+                email: email.value,
+                mensaje: mensaje.value,
+              };
+              $.ajax({
+                type: "POST",
+                url: "./controller/contacto.php",
+                data,
+                success: () => {
+                  formulario.reset();
+                  form.classList.remove("was-validated");
+                  alert("Enviado gracias por contactarnos!");
+                },
+              });
             }
             form.classList.add("was-validated");
           },

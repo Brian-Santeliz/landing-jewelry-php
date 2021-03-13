@@ -20,6 +20,7 @@
             class="p-5 mt-5 formulario-contacto needs-validation"
             novalidate
             id="formulario-contacto"
+            method="POST"
           >
             <div class="form-group">
               <label for="nombre">Nombre:</label>
