@@ -103,7 +103,6 @@
 			<?php 
 				}
 				for ($i=1; $i <= $total_paginas; $i++) { 
-					# code...
 					if($i == $pagina)
 					{
 						echo '<li class="pageSelected">'.$i.'</li>';

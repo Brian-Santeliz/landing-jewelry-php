@@ -92,6 +92,10 @@ header{
 .alerta{
 	color:var(--azul-fuerte);
 	font-weight: bold;
+	text-align: center;
+	padding:1rem;
+	margin:1rem;
+	text-transform: uppercase;
 }
 .optionsBar a {
     display: -webkit-flex;

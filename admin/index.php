@@ -4,7 +4,7 @@ $alert = '';
 session_start();
 if(!empty($_SESSION['active']))
 {
-	header('location: sistema/');
+	header('location: nova-admin/');
 }else{
 
 	if(!empty($_POST))
@@ -33,7 +33,7 @@ if(!empty($_SESSION['active']))
 				$_SESSION['user']   = $data['usuario'];
 				$_SESSION['rol']    = $data['rol'];
 
-				header('location: sistema/');
+				header('location: nova-admin/');
 			}else{
 				$alert = 'El usuario o la clave son incorrectos';
 				session_destroy();
