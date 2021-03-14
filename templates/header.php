@@ -9,7 +9,7 @@
     />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <title>Nova Joyeria | Joyas de otro mundo</title>
+    <title><?php echo $title ?> | Nova Joyeria</title>
     <link href="css/css.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -17,7 +17,7 @@
     <header class="encabezado-sitio container">
       <div class="row justify-content-md-between align-items-center">
         <div class="col-lg-4">
-          <a href="index.php"> Nova Joyeria </a>
+          <a href="index.php"> <img src="img/logo.png" alt=""> </a>
         </div>
         <div class="col-lg-4">
           <nav class="sociales text-center text-lg-right">

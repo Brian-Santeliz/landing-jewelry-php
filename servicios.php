@@ -1,4 +1,5 @@
   <?php 
+    $title = "Conoce nuestros servicios";
     include "templates/header.php";
     include "templates/navbar.php";
   ?>

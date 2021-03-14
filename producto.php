@@ -7,6 +7,7 @@
         exit;
       }
     }
+    $title = "Producto";
     include "templates/header.php";
     include "templates/navbar.php";
     include "controller/funcion.php";
@@ -55,6 +56,5 @@
     }else{
     echo '<h2 class="text-center text-uppercase mt-4">Producto No Encontrado</h2>';
     }
-
     include "templates/footer.php";
     ?>

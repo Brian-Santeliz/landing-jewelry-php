@@ -1,4 +1,5 @@
   <?php 
+  $title = "Productos destacados";
   include "templates/header.php";
   include "templates/navbar.php";
   include "controller/funcion.php";

@@ -1,4 +1,5 @@
   <?php 
+    $title = "Contáctanos";
     include "templates/header.php";
     include "templates/navbar.php";
   ?>
