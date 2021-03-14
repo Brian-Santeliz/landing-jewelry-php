@@ -4,7 +4,6 @@
 	{
 		header("location: ./");
 	}
-	
 	include "../conexion.php";
 
 	if(!empty($_POST))
@@ -28,9 +27,8 @@
 			if($result > 0){
 				$alert='<p class="msg_error">El correo o el usuario ya existe.</p>';
 			}else{
-
 				$query_insert = mysqli_query($conection,"INSERT INTO usuario(nombre,correo,usuario,clave,rol)
-																	VALUES('$nombre','$email','$user','$clave','$rol')");
+				VALUES('$nombre','$email','$user','$clave','$rol')");
 				if($query_insert){
 					$alert='<p class="msg_save">Usuario creado correctamente.</p>';
 				}else{
@@ -43,11 +41,7 @@
 		}
 
 	}
-
-
-
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

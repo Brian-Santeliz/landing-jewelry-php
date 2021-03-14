@@ -1,5 +1,3 @@
-@import url(../fonts/GothamBook.css);
-@import url(../fonts/GothamBold.css);
 *{
 	margin: 0;
 	padding: 0;
@@ -9,6 +7,7 @@
 	--rosa: #e082a8;
 	--azul: #8ed3cc;
 	--fondo:#fff;
+	--azul-fuerte:#096074;
 }
 body{
 	background: var(--fondo);
@@ -86,14 +85,13 @@ header{
     text-transform: uppercase;
     margin-left: 30px;
 }
-.photouser {
-    margin-left: 30px;
-    width: 25px;
-    height: 25px;
-}
 .close{
 	width: 25px;
     height: 25px;
+}
+.alerta{
+	color:var(--azul-fuerte);
+	font-weight: bold;
 }
 .optionsBar a {
     display: -webkit-flex;
@@ -290,12 +288,10 @@ table td{
 }
 
 .data_delete form{
-
 	background: initial;
 	margin: auto;
 	padding: 20px 50px;
 	border: 0;
-
 }
 .paginador ul{
 	padding: 15px;

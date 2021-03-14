@@ -12,7 +12,7 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<section id="container">
-		<h1>Bienvenido al sistema de Nova Joyeria</h1>
+		<p class="alerta">Bienvenido al sistema de Nova Joyeria</p>
 
 	</section>
 	<?php include "includes/footer.php"; ?>
