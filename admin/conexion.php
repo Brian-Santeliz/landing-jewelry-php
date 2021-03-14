@@ -3,7 +3,7 @@
 	$host = 'localhost';
 	$user = 'root';
 	$password = '300900';
-	$db = 'facturacion';
+	$db = 'joyeria-db';
 
 	$conection = @mysqli_connect($host,$user,$password,$db);
 

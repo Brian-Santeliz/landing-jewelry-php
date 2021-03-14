@@ -15,6 +15,5 @@
 		<p class="alerta">Bienvenido al sistema de Nova Joyeria</p>
 
 	</section>
-	<?php include "includes/footer.php"; ?>
 </body>
 </html>
