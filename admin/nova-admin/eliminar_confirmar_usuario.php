@@ -48,7 +48,6 @@
 
 		if($result > 0){
 			while ($data = mysqli_fetch_array($query)) {
-				# code...
 				$nombre = $data['nombre'];
 				$usuario = $data['usuario'];
 				$rol     = $data['rol'];
@@ -85,8 +84,6 @@
 				<input type="submit" value="Aceptar" class="btn_ok">
 			</form>
 		</div>
-
-
 	</section>
 </body>
 </html>

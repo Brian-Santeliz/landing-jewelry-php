@@ -65,5 +65,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>

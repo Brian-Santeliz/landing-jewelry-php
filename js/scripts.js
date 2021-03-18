@@ -30,7 +30,11 @@
                 success: () => {
                   formulario.reset();
                   form.classList.remove("was-validated");
-                  alert("Enviado gracias por contactarnos!");
+                  Swal.fire(
+                    "Recibido",
+                    "¡Gracias por contactarnos!",
+                    "success"
+                  );
                 },
               });
             }

@@ -1,13 +1,10 @@
 <?php 
-	
 	session_start();
 	if($_SESSION['rol'] != 1)
 	{
 		header("location: ./");
 	}
-
 	include "../conexion.php";
-
 	if(!empty($_POST))
 	{
 		$alert='';
@@ -22,8 +19,6 @@
 			$user   = $_POST['usuario'];
 			$clave  = md5($_POST['clave']);
 			$rol    = $_POST['rol'];
-
-
 			$query = mysqli_query($conection,"SELECT * FROM usuario 
 													   WHERE (usuario = '$user' AND idusuario != $idUsuario)
 													   OR (correo = '$email' AND idusuario != $idUsuario) ");
@@ -33,10 +28,8 @@
 			if($result > 0){
 				$alert='<p class="msg_error">El correo o el usuario ya existe.</p>';
 			}else{
-
 				if(empty($_POST['clave']))
 				{
-
 					$sql_update = mysqli_query($conection,"UPDATE usuario
 															SET nombre = '$nombre', correo='$email',usuario='$user',rol='$rol'
 															WHERE idusuario= $idUsuario ");
@@ -46,21 +39,16 @@
 															WHERE idusuario= $idUsuario ");
 
 				}
-
 				if($sql_update){
 					$alert='<p class="msg_save">Usuario actualizado correctamente.</p>';
 				}else{
 					$alert='<p class="msg_error">Error al actualizar el usuario.</p>';
 				}
-
 			}
-
 
 		}
 
 	}
-
-	//Mostrar Datos
 	if(empty($_REQUEST['id']))
 	{
 		header('Location: lista_usuarios.php');
@@ -81,14 +69,12 @@
 	}else{
 		$option = '';
 		while ($data = mysqli_fetch_array($sql)) {
-			# code...
 			$iduser  = $data['idusuario'];
 			$nombre  = $data['nombre'];
 			$correo  = $data['correo'];
 			$usuario = $data['usuario'];
 			$idrol   = $data['idrol'];
 			$rol     = $data['rol'];
-
 			if($idrol == 1){
 				$option = '<option value="'.$idrol.'" select>'.$rol.'</option>';
 			}else if($idrol == 2){
@@ -96,8 +82,6 @@
 			}else if($idrol == 3){
 				$option = '<option value="'.$idrol.'" select>'.$rol.'</option>';
 			}
-
-
 		}
 	}
 
@@ -113,12 +97,10 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<section id="container">
-		
 		<div class="form_register">
 			<h1>Actualizar usuario</h1>
 			<hr>
 			<div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
-
 			<form action="" method="post">
 				<input type="hidden" name="idUsuario" value="<?php echo $iduser; ?>">
 				<label for="nombre">Nombre</label>
@@ -130,7 +112,6 @@
 				<label for="clave">Clave</label>
 				<input type="password" name="clave" id="clave" placeholder="Clave de acceso">
 				<label for="rol">Tipo Usuario</label>
-
 				<?php 
 					include "../conexion.php";
 					$query_rol = mysqli_query($conection,"SELECT * FROM rol");
@@ -138,7 +119,6 @@
 					$result_rol = mysqli_num_rows($query_rol);
 
 				 ?>
-
 				<select name="rol" id="rol" class="notItemOne">
 					<?php
 						echo $option; 
@@ -148,20 +128,13 @@
 					?>
 							<option value="<?php echo $rol["idrol"]; ?>"><?php echo $rol["rol"] ?></option>
 					<?php 
-								# code...
 							}
-							
 						}
 					 ?>
 				</select>
 				<input type="submit" value="Actualizar usuario" class="btn_save">
-
 			</form>
-
-
 		</div>
-
-
 	</section>
 </body>
 </html>

@@ -19,8 +19,6 @@
 			$user   = $_POST['usuario'];
 			$clave  = md5($_POST['clave']);
 			$rol    = $_POST['rol'];
-
-
 			$query = mysqli_query($conection,"SELECT * FROM usuario WHERE usuario = '$user' OR correo = '$email' ");
 			$result = mysqli_fetch_array($query);
 
@@ -34,10 +32,7 @@
 				}else{
 					$alert='<p class="msg_error">Error al crear el usuario.</p>';
 				}
-
 			}
-
-
 		}
 
 	}
@@ -85,7 +80,6 @@
 					?>
 							<option value="<?php echo $rol["idrol"]; ?>"><?php echo $rol["rol"] ?></option>
 					<?php 
-								# code...
 							}
 							
 						}

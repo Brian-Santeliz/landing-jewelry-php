@@ -2,7 +2,6 @@
 	session_start();
 	include "../conexion.php";	
  ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,10 +24,8 @@
 		echo '<p class="alerta">Mensajes de contacto en Nova Joyeria:</p>';
 			 $sql = mysqli_query($conection,"SELECT * from contacto");
 			$resultado = mysqli_num_rows($sql);
-			
     		if($resultado >0){
 				while ($contacto =  mysqli_fetch_array($sql)){
-				
 		?>
 					<tr>
 					<td><?php echo $contacto["id"]; ?></td>

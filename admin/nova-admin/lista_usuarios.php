@@ -4,12 +4,8 @@
 	{
 		header("location: ./");
 	}
-	
 	include "../conexion.php";	
-
  ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,15 +16,12 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<section id="container">
-		
 		<h1>Lista de usuarios</h1>
 		<a href="registro_usuario.php" class="btn_new">Crear usuario</a>
-		
 		<form action="buscar_usuario.php" method="get" class="form_search">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
 			<input type="submit" value="Buscar" class="btn_search">
 		</form>
-
 		<table>
 			<tr>
 				<th>ID</th>
@@ -39,33 +32,24 @@
 				<th>Acciones</th>
 			</tr>
 		<?php 
-			//Paginador
 			$sql_registe = mysqli_query($conection,"SELECT COUNT(*) as total_registro FROM usuario WHERE estatus = 1 ");
 			$result_register = mysqli_fetch_array($sql_registe);
 			$total_registro = $result_register['total_registro'];
-
 			$por_pagina = 5;
-
 			if(empty($_GET['pagina']))
 			{
 				$pagina = 1;
 			}else{
 				$pagina = $_GET['pagina'];
 			}
-
 			$desde = ($pagina-1) * $por_pagina;
 			$total_paginas = ceil($total_registro / $por_pagina);
-
 			$query = mysqli_query($conection,"SELECT u.idusuario, u.nombre, u.correo, u.usuario, r.rol FROM usuario u INNER JOIN rol r ON u.rol = r.idrol WHERE estatus = 1 ORDER BY u.idusuario ASC LIMIT $desde,$por_pagina 
 				");
-
 			mysqli_close($conection);
-
 			$result = mysqli_num_rows($query);
 			if($result > 0){
-
 				while ($data = mysqli_fetch_array($query)) {
-					
 			?>
 				<tr>
 					<td><?php echo $data["idusuario"]; ?></td>
@@ -80,17 +64,12 @@
 						|
 						<a class="link_delete" href="eliminar_confirmar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
 					<?php } ?>
-						
 					</td>
 				</tr>
-			
 		<?php 
 				}
-
 			}
 		 ?>
-
-
 		</table>
 		<div class="paginador">
 			<ul>
@@ -110,7 +89,6 @@
 						echo '<li><a href="?pagina='.$i.'">'.$i.'</a></li>';
 					}
 				}
-
 				if($pagina != $total_paginas)
 				{
 			 ?>
@@ -119,8 +97,6 @@
 			<?php } ?>
 			</ul>
 		</div>
-
-
 	</section>
 </body>
 </html>

@@ -6,16 +6,13 @@ if(!empty($_SESSION['active']))
 {
 	header('location: nova-admin/');
 }else{
-
 	if(!empty($_POST))
 	{
 		if(empty($_POST['usuario']) || empty($_POST['clave']))
 		{
 			$alert = 'Ingrese su usuario y su calve';
 		}else{
-
 			require_once "conexion.php";
-
 			$user = mysqli_real_escape_string($conection,$_POST['usuario']);
 			$pass = md5(mysqli_real_escape_string($conection,$_POST['clave']));
 
@@ -38,10 +35,7 @@ if(!empty($_SESSION['active']))
 				$alert = 'El usuario o la clave son incorrectos';
 				session_destroy();
 			}
-
-
 		}
-
 	}
 }
  ?>
@@ -59,7 +53,6 @@ if(!empty($_SESSION['active']))
 			
 			<h3>Iniciar Sesión</h3>
 			<img src="img/login-nova.jpg" alt="Login" class="login">
-
 			<input type="text" name="usuario" placeholder="Usuario">
 			<input type="password" name="clave" placeholder="Contraseña">
 			<div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
@@ -68,7 +61,6 @@ if(!empty($_SESSION['active']))
 				<a href="../index.php" class="volver">Volver</a>
 			</div>
 		</form>
-
 	</section>
 </body>
 </html>
