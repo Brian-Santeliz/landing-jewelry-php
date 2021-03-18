@@ -4,12 +4,8 @@
 	{
 		header("location: ./");
 	}
-
 	include "../conexion.php";	
-
  ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +27,6 @@
 
 
 		 ?>
-		
 		<h1>Lista de usuarios</h1>
 		<a href="registro_usuario.php" class="btn_new">Crear usuario</a>
 		
@@ -50,7 +45,6 @@
 				<th>Acciones</th>
 			</tr>
 		<?php 
-			//Paginador
 			$rol = '';
 			if($busqueda == 'administrador')
 			{
@@ -64,8 +58,6 @@
 
 				$rol = " OR rol LIKE '%3%' ";
 			}
-
-
 			$sql_registe = mysqli_query($conection,"SELECT COUNT(*) as total_registro FROM usuario 
 																WHERE ( idusuario LIKE '%$busqueda%' OR 
 																		nombre LIKE '%$busqueda%' OR 
@@ -73,22 +65,17 @@
 																		usuario LIKE '%$busqueda%' 
 																		$rol  ) 
 																AND estatus = 1  ");
-
 			$result_register = mysqli_fetch_array($sql_registe);
 			$total_registro = $result_register['total_registro'];
-
 			$por_pagina = 5;
-
 			if(empty($_GET['pagina']))
 			{
 				$pagina = 1;
 			}else{
 				$pagina = $_GET['pagina'];
 			}
-
 			$desde = ($pagina-1) * $por_pagina;
 			$total_paginas = ceil($total_registro / $por_pagina);
-
 			$query = mysqli_query($conection,"SELECT u.idusuario, u.nombre, u.correo, u.usuario, r.rol FROM usuario u INNER JOIN rol r ON u.rol = r.idrol 
 										WHERE 
 										( u.idusuario LIKE '%$busqueda%' OR 
@@ -102,9 +89,7 @@
 			mysqli_close($conection);
 			$result = mysqli_num_rows($query);
 			if($result > 0){
-
 				while ($data = mysqli_fetch_array($query)) {
-					
 			?>
 				<tr>
 					<td><?php echo $data["idusuario"]; ?></td>
@@ -114,25 +99,18 @@
 					<td><?php echo $data['rol'] ?></td>
 					<td>
 						<a class="link_edit" href="editar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Editar</a>
-
 					<?php if($data["idusuario"] != 1){ ?>
 						|
 						<a class="link_delete" href="eliminar_confirmar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
 					<?php } ?>
-						
 					</td>
 				</tr>
-			
 		<?php 
 				}
-
 			}
 		 ?>
-
-
 		</table>
 <?php 
-	
 	if($total_registro != 0)
 	{
  ?>
@@ -154,7 +132,6 @@
 						echo '<li><a href="?pagina='.$i.'&busqueda='.$busqueda.'">'.$i.'</a></li>';
 					}
 				}
-
 				if($pagina != $total_paginas)
 				{
 			 ?>
@@ -164,8 +141,6 @@
 			</ul>
 		</div>
 <?php } ?>
-
-
 	</section>
 </body>
 </html>
