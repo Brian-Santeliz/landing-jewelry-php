@@ -24,17 +24,13 @@
 				header("location: lista_usuarios.php");
 				mysqli_close($conection);
 			}
-
-
 		 ?>
 		<h1>Lista de usuarios</h1>
 		<a href="registro_usuario.php" class="btn_new">Crear usuario</a>
-		
-		<form action="buscar_usuario.php" method="get" class="form_search">
+		<form action="buscar_usuario.php" method="get" class="formulario-busqueda">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar" value="<?php echo $busqueda; ?>">
 			<input type="submit" value="Buscar" class="btn_search">
 		</form>
-
 		<table>
 			<tr>
 				<th>ID</th>

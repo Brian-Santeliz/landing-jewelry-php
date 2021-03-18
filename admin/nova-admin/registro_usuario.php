@@ -13,7 +13,6 @@
 		{
 			$alert='<p class="msg_error">Todos los campos son obligatorios.</p>';
 		}else{
-
 			$nombre = $_POST['nombre'];
 			$email  = $_POST['correo'];
 			$user   = $_POST['usuario'];
@@ -21,7 +20,6 @@
 			$rol    = $_POST['rol'];
 			$query = mysqli_query($conection,"SELECT * FROM usuario WHERE usuario = '$user' OR correo = '$email' ");
 			$result = mysqli_fetch_array($query);
-
 			if($result > 0){
 				$alert='<p class="msg_error">El correo o el usuario ya existe.</p>';
 			}else{
@@ -47,12 +45,10 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<section id="container">
-		
 		<div class="form_register">
 			<h1>Registro usuario</h1>
 			<hr>
 			<div class="alert"><?php echo isset($alert) ? $alert : ''; ?></div>
-
 			<form action="" method="post">
 				<label for="nombre">Nombre</label>
 				<input type="text" name="nombre" id="nombre" placeholder="Nombre completo">
@@ -63,15 +59,11 @@
 				<label for="clave">Clave</label>
 				<input type="password" name="clave" id="clave" placeholder="Clave de acceso">
 				<label for="rol">Tipo Usuario</label>
-
 				<?php 
-
 					$query_rol = mysqli_query($conection,"SELECT * FROM rol");
 					mysqli_close($conection);
 					$result_rol = mysqli_num_rows($query_rol);
-
 				 ?>
-
 				<select name="rol" id="rol">
 					<?php 
 						if($result_rol > 0)
@@ -81,18 +73,12 @@
 							<option value="<?php echo $rol["idrol"]; ?>"><?php echo $rol["rol"] ?></option>
 					<?php 
 							}
-							
 						}
 					 ?>
 				</select>
 				<input type="submit" value="Crear usuario" class="btn_save">
-
 			</form>
-
-
 		</div>
-
-
 	</section>
 </body>
 </html>

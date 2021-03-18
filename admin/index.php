@@ -29,7 +29,6 @@ if(!empty($_SESSION['active']))
 				$_SESSION['email']  = $data['email'];
 				$_SESSION['user']   = $data['usuario'];
 				$_SESSION['rol']    = $data['rol'];
-
 				header('location: nova-admin/');
 			}else{
 				$alert = 'El usuario o la clave son incorrectos';
