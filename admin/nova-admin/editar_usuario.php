@@ -36,7 +36,7 @@
 															WHERE idusuario= $idUsuario ");
 				}
 				if($sql_update){
-					$alert='<p class="msg_save">Usuario actualizado correctamente.</p>';
+					$alert='<p class="msg_correcto">Usuario actualizado correctamente.</p>';
 				}else{
 					$alert='<p class="msg_error">Error al actualizar el usuario.</p>';
 				}
@@ -128,7 +128,7 @@
 						}
 					 ?>
 				</select>
-				<input type="submit" value="Actualizar usuario" class="btn_save">
+				<input type="submit" value="Actualizar usuario" class="btn_guardar">
 			</form>
 		</div>
 	</section>

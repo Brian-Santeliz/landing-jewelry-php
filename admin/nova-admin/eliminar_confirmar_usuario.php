@@ -72,7 +72,7 @@
 <body>
 	<?php include "includes/header.php"; ?>
 	<section id="container">
-		<div class="data_delete">
+		<div class="data_eliminar">
 			<h2>¿Está seguro de eliminar el siguiente registro?</h2>
 			<p>Nombre: <span><?php echo $nombre; ?></span></p>
 			<p>usuario: <span><?php echo $usuario; ?></span></p>
@@ -80,7 +80,7 @@
 
 			<form method="post" action="">
 				<input type="hidden" name="idusuario" value="<?php echo $idusuario; ?>">
-				<a href="lista_usuarios.php" class="btn_cancel">Cancelar</a>
+				<a href="lista_usuarios.php" class="btn_cancelar">Cancelar</a>
 				<input type="submit" value="Aceptar" class="btn_ok">
 			</form>
 		</div>

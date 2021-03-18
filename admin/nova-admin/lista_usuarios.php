@@ -17,10 +17,10 @@
 	<?php include "includes/header.php"; ?>
 	<section id="container">
 		<h1>Lista de usuarios</h1>
-		<a href="registro_usuario.php" class="btn_new">Crear usuario</a>
+		<a href="registro_usuario.php" class="btn_nuevo">Crear usuario</a>
 		<form action="buscar_usuario.php" method="get" class="formulario-busqueda">
 			<input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
-			<input type="submit" value="Buscar" class="btn_search">
+			<input type="submit" value="Buscar" class="btn_busqueda">
 		</form>
 		<table>
 			<tr>
@@ -58,11 +58,11 @@
 					<td><?php echo $data["usuario"]; ?></td>
 					<td><?php echo $data['rol'] ?></td>
 					<td>
-						<a class="link_edit" href="editar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Editar</a>
+						<a class="link_editar" href="editar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Editar</a>
 
 					<?php if($data["idusuario"] != 1){ ?>
 						|
-						<a class="link_delete" href="eliminar_confirmar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
+						<a class="link_eliminar" href="eliminar_confirmar_usuario.php?id=<?php echo $data["idusuario"]; ?>">Eliminar</a>
 					<?php } ?>
 					</td>
 				</tr>
@@ -84,7 +84,7 @@
 				for ($i=1; $i <= $total_paginas; $i++) { 
 					if($i == $pagina)
 					{
-						echo '<li class="pageSelected">'.$i.'</li>';
+						echo '<li class="pagina-seleccionada">'.$i.'</li>';
 					}else{
 						echo '<li><a href="?pagina='.$i.'">'.$i.'</a></li>';
 					}

@@ -26,7 +26,7 @@
 				$query_insert = mysqli_query($conection,"INSERT INTO usuario(nombre,correo,usuario,clave,rol)
 				VALUES('$nombre','$email','$user','$clave','$rol')");
 				if($query_insert){
-					$alert='<p class="msg_save">Usuario creado correctamente.</p>';
+					$alert='<p class="msg_correcto">Usuario creado correctamente.</p>';
 				}else{
 					$alert='<p class="msg_error">Error al crear el usuario.</p>';
 				}
@@ -76,7 +76,7 @@
 						}
 					 ?>
 				</select>
-				<input type="submit" value="Crear usuario" class="btn_save">
+				<input type="submit" value="Crear usuario" class="btn_guardar">
 			</form>
 		</div>
 	</section>
