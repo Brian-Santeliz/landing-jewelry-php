@@ -9,7 +9,7 @@
 		<div class="header">
 			
 			<h1>Nova Joyeria</h1>
-			<div class="optionsBar">
+			<div class="barra">
 				<p>Venezuela, <?php echo fechaC(); ?></p>
 				<span>|</span>
 				<span class="user"><?php echo $_SESSION['user'].' -'.$_SESSION['rol']; ?></span>
