@@ -47,9 +47,7 @@ if(!empty($_SESSION['active']))
 </head>
 <body>
 	<section id="container">
-		
 		<form action="" method="post">
-			
 			<h3>Iniciar Sesión</h3>
 			<img src="img/login-nova.jpg" alt="Login" class="login">
 			<input type="text" name="usuario" placeholder="Usuario">
