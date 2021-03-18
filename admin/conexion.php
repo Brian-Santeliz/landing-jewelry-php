@@ -1,7 +1,7 @@
 <?php 
 	$host = 'localhost';
 	$user = 'root';
-	$password = '300900';
+	$password = '';
 	$db = 'joyeria-db';
 	$conection = @mysqli_connect($host,$user,$password,$db);
 	if(!$conection){
