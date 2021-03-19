@@ -10,7 +10,7 @@ if(!empty($_SESSION['active']))
 	{
 		if(empty($_POST['usuario']) || empty($_POST['clave']))
 		{
-			$alert = 'Ingrese su usuario y su calve';
+			$alert = 'Ingrese su usuario y su clave';
 		}else{
 			require_once "conexion.php";
 			$user = mysqli_real_escape_string($conection,$_POST['usuario']);
