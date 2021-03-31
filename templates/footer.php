@@ -68,3 +68,10 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </body>
 </html>
+<?php
+// Crea el archivo de cache
+$cached = fopen($cachefile, 'w');
+fwrite($cached, ob_get_contents());
+fclose($cached);
+ob_end_flush(); // Envia la salida al navegador
+?>
