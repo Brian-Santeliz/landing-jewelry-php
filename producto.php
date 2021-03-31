@@ -3,7 +3,7 @@
       if(filter_var($_GET["productoId"], FILTER_VALIDATE_INT)){
         $producto_id = $_GET["productoId"];
       }else{
-        header("location: index.php");
+        header("location: 404.html");
         exit;
       }
     }

@@ -1,10 +1,10 @@
 <?php 
 	$host = 'localhost';
 	$user = 'root';
-	$password = '';
+	$password = '300900';
 	$db = 'joyeria-db';
-	$conection = @mysqli_connect($host,$user,$password,$db);
-	if ($conexion->connect_error) {
-	die("Ocurrió un error conectandose en la base de datos, intente más tarde: " . $conexion->connect_error);
+	$conection = new mysqli($host,$user,$password,$db);
+	if ($conection->connect_error) {
+	die("Ocurrió un error conectandose en la base de datos, verifique e intente nuevamente: " . $conection->connect_error);
 	 }
 ?>
