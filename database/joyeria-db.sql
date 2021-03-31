@@ -1,35 +1,12 @@
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `joyeria-db`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `contacto`
---
-
 CREATE TABLE `contacto` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(40) COLLATE utf16_bin NOT NULL,
-  `email` varchar(30) COLLATE utf16_bin NOT NULL,
-  `mensaje` longtext COLLATE utf16_bin NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf16 COLLATE=utf16_bin;
+  `nombre` varchar(40) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `mensaje` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `productos`
---
+INSERT INTO `contacto` (`id`, `nombre`, `email`, `mensaje`) VALUES
+(2, 'Anyelo', 'anyelo@uvm.edu.ve', 'Excelente sitio web. Me gustaría saber si tiene disponibles relojes de caballero en plata. Gracias!');
 
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
@@ -41,9 +18,6 @@ CREATE TABLE `productos` (
   `descripcion_corta` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `productos`
---
 
 INSERT INTO `productos` (`id`, `nombre`, `imagen_grande`, `imagen_mini`, `precio`, `descripcion`, `descripcion_corta`) VALUES
 (1, 'Collar de Plata chapado en oro', 'producto_1.jpg', 'producto_mini_1.jpg', '25.00', 'Un collar de corazon con un recortado más pequeño que se vuelven en uno solo, una flecha con forma de corazon. Ambos collares se pueden personalizar con una palabra o inscripcion especial. Personaliza el tuyo ahora y haz que este collar sea único, solo para ustedes 2. Material plata de ley chapado en oro y AAA circonita cubica. exquisita artesania. Especificaciones: Colgante Tamaño: 0,77 pul x 0,73 pul, mama doble corazón. Tamaño de la cadena: 16 + 2 pul, super fuerte cadena de cable con un mosqueton ajustable cm. Peso: 0.18oz. color: blanco y oro rosa, adorable, diseño de moda, pulido a mano, simple pero elegante. Descripción: esta adorable mamá corazón doble diseño estó destinado a ganar un corazón. engastado en plata de ley chapado en oro de la madre, de esta manera collar tiene un doble en forma de corazón Colgante Attached y un brillantes AAA circonitas cúbicas Gemstone. pulido a un brillo brillante, el colgante suspende sobre un cable 18.0-inch cadena y asegura con un mosqueton. regalo ideal elección: Viene con una elegante caja regalo. es un regalo ideal para sus, madre, esposa, amante, prometida, novia, hija, hermana o amigo en el día de Navidad, Dia de Acción de Gracias, día de la madre, día de San Valentin, boda, aniversario, cumpleaños o una ocasión especial, la mejor confesión de amor. Regalo de Navidad perfecto para mama, suegra Un corazón MOM colgante collar como una conexión especial hace un regalo perfecto para mama para expresar su amor. Regalos Sorprendentes Sorpresa Nada es más maravilloso que la mente.', 'Collar de Corazon y Flecha es la manera perfecta de sorprender a tu pareja! Tu y tu pareja atesoraran este collar para siempre'),
@@ -55,31 +29,18 @@ INSERT INTO `productos` (`id`, `nombre`, `imagen_grande`, `imagen_mini`, `precio
 (7, 'Anillo de 3 Oro & Diamante', 'producto_7.jpg', 'producto_mini_7.jpg', '50.00', 'Los términos “dorado” y “baño de oro” se usan para describir el material de los productos que tienen una capa extremadamente fina de oro aplicada por medio de un proceso de electro-enchapado (menos de .175 micrones de espesor). El efecto dorado de estos productos se desgasta más rápidamente que el enchapado de oro, el oro laminado o el oro electro-enchapado.\r\n\r\nEl oro puro – oro 24 quilates (24K) – es un metal blando, y usualmente se lo mezcla con otros metales para aumentar su dureza y durabilidad. El total de la cantidad de oro puro y los demás metales suma 24, por lo tanto:\r\n\r\nEl oro 18 quilates (18k) contiene 18 partes de oro fundido con 6 partes de otro metal.\r\nEl oro 14 quilates (14K) contiene 14 partes de oro fundido con 10 partes de otro metal.\r\nCerca de la marca de calidad de los quilates, debería ver el nombre de la compañía que respalda la marca o de la marca registrada en Estados Unidos. La marca registrada puede estar indicada con un nombre, un símbolo o con iniciales. Si está pensando en comprar una pieza de oro pero no ve la marca registrada junto a la marca de quilates, no la compre.\r\n\r\n\r\nEl anillo es un accesorio para la mano que los seres humanos han utilizado desde remotísimos tiempos y lo han hecho con diferentes propósitos. Ya desde el antiguo Imperio Egipcio se encuentran registros de su utilización, la mayoría de ellos han sido hallados en las tumbas en oportunidad de las diversas exploraciones que el hombre viene haciendo con motivo de descubrir cómo vivían sus antepasados.\r\n', 'Anillo de oro 14 quilates (14K) contiene 14 partes de oro fundido con 10 partes de otro metal'),
 (8, 'Gargantilla plata esterlina 925\r\n', 'producto_8.jpg', 'producto_mini_8.jpg', '29.00', 'Elegante collar de gargantilla de cristal de plata esterlina 925\r\nLargo de la cadena 45 cm aprox.\r\n\r\nCollares de cadenas. Nuevos.\r\nPara colocar tipo gargantilla.\r\nLargos y modelos variados (en las fotos)\r\nPlateados (uno con zarcillos) y uno Dorado/Marrón (con zarcillos). Ver fotos. según color sobre casiila azul.\r\nPrecios desde 3,00 hasta 10,00 en cambio circulante.\r\nFavor confirmar precio y disponibilidad de cada pieza, forma de pago y de entrega antes de ofertar.\r\nEntrega personal en sitio a convenir.\r\n\r\nEl collar es un complemento en forma de sarta o cadena más o menos larga que rodea el cuello o parte superior del pecho como adorno. También se ha utilizado como objeto de distinción ya solo, ya complementado con alguna cruz o medalla colgante propia de condecoraciones. Si es ceñido al cuello y no pende, se denomina gargantilla.\r\n\r\nLos collares prehistóricos de la Edad de piedra consisten siempre en sartas de conchas, huesecillos, dientes y piedrecillas. Los de la Edad de los metales agregan a los anteriores elementos algunas cuentas de oro y cobre, de barro cocido y de pasta vítrea o bien se transforman en torques (collares rígidos) a manera de trenzas y de argollas o se componen de cerquillos metálicos de los cuales penden pequeñas anillas del mismo material. De todas las formas indicadas, se han exhumado ejemplares preciosos en diferentes sepulturas prehistóricas, ibéricas y celtíberas de España entre los cuales ofrece no poco interés por su simbolismo el collar de diferentes piezas de barro cocido que se halló en una sepultura de la necrópolis celtibérica de Navafría, en Clares (Guadalajara, hoy en día en el M.A.N.).\r\n\r\n', 'Elegante collar de gargantilla de cristal de plata esterlina 925 Largo de la cadena 45 cm aprox');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `rol`
---
 
 CREATE TABLE `rol` (
   `idrol` int(11) NOT NULL,
   `rol` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `rol`
---
 
 INSERT INTO `rol` (`idrol`, `rol`) VALUES
 (1, 'Administrador'),
 (2, 'Supervisor'),
 (3, 'Vendedor');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuario`
---
 
 CREATE TABLE `usuario` (
   `idusuario` int(11) NOT NULL,
@@ -89,78 +50,37 @@ CREATE TABLE `usuario` (
   `clave` varchar(100) DEFAULT NULL,
   `rol` int(11) DEFAULT NULL,
   `estatus` int(11) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `usuario`
---
 
 INSERT INTO `usuario` (`idusuario`, `nombre`, `correo`, `usuario`, `clave`, `rol`, `estatus`) VALUES
-(1, 'Yovana', 'yovana@novajoyeria.com', 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 1, 1),
+(1, 'Yovana', 'yovana@novajoyeria.com', 'admin', 'c4ca4238a0b923820dcc509a6f75849b', 1, 1);
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `contacto`
---
 ALTER TABLE `contacto`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `productos`
---
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
 
---
--- Indices de la tabla `rol`
---
 ALTER TABLE `rol`
   ADD PRIMARY KEY (`idrol`);
 
---
--- Indices de la tabla `usuario`
---
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`idusuario`),
   ADD KEY `rol` (`rol`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `contacto`
---
 ALTER TABLE `contacto`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `productos`
---
+
 ALTER TABLE `productos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT de la tabla `rol`
---
+
 ALTER TABLE `rol`
   MODIFY `idrol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=;
---
--- Restricciones para tablas volcadas
---
 
---
--- Filtros para la tabla `usuario`
---
+ALTER TABLE `usuario`
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 ALTER TABLE `usuario`
   ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`rol`) REFERENCES `rol` (`idrol`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
