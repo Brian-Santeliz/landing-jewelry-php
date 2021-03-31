@@ -85,7 +85,7 @@
                   nosotros
                 </h2>
                 <a
-                  href="nosotros.html"
+                  href="nosotros.php"
                   class="btn btn-primary btn-block text-uppercase mt-4 py-3"
                   >Leer más</a
                 >
@@ -103,7 +103,7 @@
                   servicios
                 </h2>
                 <a
-                  href="servicios.html"
+                  href="servicios.php"
                   class="btn btn-primary btn-block text-uppercase mt-4 py-3"
                   >Leer más</a
                 >

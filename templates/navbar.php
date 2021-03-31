@@ -21,10 +21,10 @@
                 <a href="index.php" class="nav-link">Inicio</a>
               </li>
               <li class="nav-item  <?php echo $pagina === "nosotros" ? "active" : ""  ?> ">
-                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="nosotros.php" class="nav-link">Nosotros</a>
               </li>
               <li class="nav-item  <?php echo $pagina === "servicios" ? "active" : ""  ?> ">
-                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="servicios.php" class="nav-link">Servicios</a>
               </li>
               <li class="nav-item  <?php echo $pagina === "productos" ? "active" : ""  ?> ">
                 <a href="productos.php" class="nav-link">Productos</a>
